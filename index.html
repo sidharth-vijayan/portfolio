@@ -34,12 +34,12 @@
       --bg3: #e5e5e5;
       --surface: #fafafa;
       --border: #d4d4d4;
-      --neon: #11803e7d;
-      --neon2: #17995f84;
+      --neon: #12ad48;
+      --neon2: #069253cf;
       --neon3: #cc0044;
       --text: #171717;
       --muted: #525252;
-      --accent: #008066;
+      --accent: #11cfa04d;
       --card-bg: #ffffff;
       --nav-bg: rgba(255, 255, 255, 0.92);
     }
@@ -656,6 +656,44 @@
       transform: scaleX(1);
     }
 
+    .project-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: .58rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .project-badge.group {
+      background: rgba(0, 240, 255, .1);
+      border: 1px solid var(--neon);
+      color: var(--neon);
+    }
+
+    .project-badge.prize {
+      background: rgba(255, 215, 0, .12);
+      border: 1px solid #ffd700;
+      color: #ffd700;
+    }
+
+    [data-theme="light"] .project-badge.prize {
+      background: rgba(180, 130, 0, .1);
+      border: 1px solid #b48200;
+      color: #9a6e00;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: .5rem;
+    }
+
     .project-type {
       font-family: 'Space Mono', monospace;
       font-size: .9rem;
@@ -1201,7 +1239,7 @@
           <div class="hero-photo-corner tl"></div>
           <div class="hero-photo-frame">
             <!-- Replace src with your actual photo path -->
-            <img src="pic.jpg" alt="Sidharth Vijayan" />
+            <img src="photo.jpeg" alt="Sidharth Vijayan" />
           </div>
           <div class="hero-photo-corner br"></div>
         </div>
@@ -1248,7 +1286,7 @@
             <div class="stat-label">Years of coding experience</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">5+</div>
+            <div class="stat-num">10+</div>
             <div class="stat-label">Projects built & deployed</div>
           </div>
           <div class="stat-card">
@@ -1345,110 +1383,231 @@
       </div>
       <div class="projects-grid">
 
-        <!-- Project 1 -->
+        <!-- PolyRAG -->
         <div class="project-card reveal">
-          <div class="project-type">AI / RAG System</div>
-          <div class="project-name">AutoRAG Framework</div>
-          <div class="project-desc">An open-source library for automated retrieval-augmented generation evaluation and
-            hyperparameter tuning, supporting multiple LLMs.</div>
+          <div class="project-type">RAG System</div>
+          <div class="project-name">PolyRAG</div>
+          <div class="project-desc">A Multi-Agent Multimodal RAG system that answers queries by retrieving information
+            from PDFs, Excel spreadsheets, and images. Uses a Coordinator Agent to route queries to specialized
+            sub-agents.</div>
           <div class="project-tags">
             <span class="project-tag">Python</span>
             <span class="project-tag">LangChain</span>
-            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">ChromaDB</span>
+            <span class="project-tag">Groq & Gemini</span>
+            <span class="project-tag">Ollama</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/PolyRAG" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://polyrag.streamlit.app/" class="project-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="PolyRAG.pdf" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> Research
+              Paper</a>
+          </div>
+        </div>
+
+        <!-- Context Police -->
+        <div class="project-card reveal">
+          <div class="project-type">AI / RAG Auditing</div>
+          <div class="project-name">Context Police</div>
+          <div class="project-desc">A self-healing RAG auditing framework that evaluates retrieval quality, detects
+            hallucinations, measures context coverage, and automatically repairs weak responses using iterative query
+            rewriting and grounded regeneration.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Groq (Llama 3.1)</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">LangChain</span>
             <span class="project-tag">ChromaDB</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> Report</a>
+            <a href="https://github.com/sidharth-vijayan/context-police" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- CareerCopilot -->
         <div class="project-card reveal">
-          <div class="project-type">Full Stack App</div>
-          <div class="project-name">DocuQuery AI</div>
-          <div class="project-desc">Full-stack enterprise application enabling natural language semantic search over
-            thousands of internal PDF documents.</div>
+          <div class="project-type">Full Stack Generative AI</div>
+          <div class="project-name">CareerCopilot</div>
+          <div class="project-desc">An AI-powered resume intelligence platform that analyzes resumes against job
+            descriptions to generate ATS match scores, keyword gap analysis, recruiter-style feedback, and personalized
+            optimization recommendations.</div>
           <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag">Node.js</span>
-            <span class="project-tag">MongoDB</span>
-            <span class="project-tag">Express</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card reveal">
-          <div class="project-type">IoT / Embedded</div>
-          <div class="project-name">Edge ML Anomaly Detector</div>
-          <div class="project-desc">Deployed a lightweight anomaly detection model on Raspberry Pi using TensorFlow Lite
-            for industrial predictive maintenance.</div>
-          <div class="project-tags">
-            <span class="project-tag">Arduino</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">MQTT</span>
-            <span class="project-tag">Raspberry Pi</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card reveal">
-          <div class="project-type">ML / Data Science</div>
-          <div class="project-name">NLP Sentiment Engine</div>
-          <div class="project-desc">A highly optimized sentiment analysis API capable of processing thousands of tweets
-            per second using a fine-tuned model.</div>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">TensorFlow</span>
-            <span class="project-tag">Pandas</span>
-            <span class="project-tag">Scikit-learn</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card reveal">
-          <div class="project-type">Multi-Agent System</div>
-          <div class="project-name">Swarm Intelligence Simulator</div>
-          <div class="project-desc">A simulation environment built to visualize and evaluate multi-agent reinforcement
-            learning algorithms in cooperative tasks.</div>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">CrewAI</span>
+            <span class="project-tag">Next.js 15</span>
+            <span class="project-tag">TypeScript</span>
             <span class="project-tag">OpenAI API</span>
-            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Prisma</span>
+            <span class="project-tag">TailwindCSS</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <a href="https://github.com/sidharth-vijayan/careercopilot" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
 
-        <!-- Project 6 -->
+        <!-- Smart Tomato Segregation -->
         <div class="project-card reveal">
-          <div class="project-type">Research / NLP</div>
-          <div class="project-name">Neuro-Vision Tracker</div>
-          <div class="project-desc">Real-time object tracking system utilizing YOLOv8 and a custom DeepSORT
-            implementation for multi-camera surveillance.</div>
+          <div class="project-type">IoT / Computer Vision</div>
+          <div class="project-header">
+            <div class="project-name" style="margin-bottom:0">Smart Tomato Segregation</div>
+            <div>
+              <span class="project-badge prize">🏆 First Prize — IoT Innovators Challenge</span>
+              <span class="project-badge group">Group Project</span>
+            </div>
+          </div>
+          <div class="project-desc">An end-to-end AI + IoT system for real-time object detection and physical sorting.
+            Uses YOLOv8 for tomato detection, wireless communication between mobile camera, Python, and Arduino UNO R4
+            WiFi, with servo-based physical segregation.</div>
           <div class="project-tags">
             <span class="project-tag">Python</span>
-            <span class="project-tag">HuggingFace</span>
-            <span class="project-tag">BERT</span>
-            <span class="project-tag">Flask</span>
+            <span class="project-tag">YOLOv8</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">Roboflow</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> Research Paper</a>
+            <a href="PBL IEEE PAPER.pdf" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> IEEE
+              Paper</a>
+          </div>
+        </div>
+
+        <!-- Crop Disease Detection -->
+        <div class="project-card reveal">
+          <div class="project-type">Deep Learning / Computer Vision</div>
+          <div class="project-header">
+            <div class="project-name" style="margin-bottom:0">Crop Disease Detection</div>
+            <span class="project-badge group">Group Project</span>
+          </div>
+          <div class="project-desc">An end-to-end crop disease detection system using EfficientNet-B4 (~96–98% accuracy
+            on 38 classes), LSTM for weather-based yield prediction, and a fusion model. Includes Grad-CAM
+            explainability, FastAPI backend, Streamlit dashboard, ONNX export, and Flutter mobile app.</div>
+          <div class="project-tags">
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">EfficientNet-B4</span>
+            <span class="project-tag">LSTM</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">ONNX</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/crop-disease-detection" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="CV_miniproject_report.pdf" class="project-link" target="_blank"><i class="fas fa-file-alt"></i>
+              Report</a>
+          </div>
+        </div>
+
+        <!-- PurchaseIQ -->
+        <div class="project-card reveal">
+          <div class="project-type">Web Scraping / Data Dashboard</div>
+          <div class="project-header">
+            <div class="project-name" style="margin-bottom:0">PurchaseIQ</div>
+            <span class="project-badge group">Group Project</span>
+          </div>
+          <div class="project-desc">A Java Spring Boot app that live-scrapes product data using Jsoup and runs every
+            product through a 4-dimension risk analysis engine (price, rating, stock, category), scoring items from LOW
+            to CRITICAL. Visualized via an interactive D3.js dashboard.</div>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Spring Boot</span>
+            <span class="project-tag">Jsoup</span>
+            <span class="project-tag">D3.js</span>
+            <span class="project-tag">H2</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/Web-Scrapping-and-dashboard" class="project-link"
+              target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="PurchaseIQ_Report.pdf" class="project-link" target="_blank"><i class="fas fa-file-alt"></i>
+              Report</a>
+          </div>
+        </div>
+
+        <!-- JalSevak -->
+        <div class="project-card reveal">
+          <div class="project-type">Full-Stack Mobile App</div>
+          <div class="project-name">JalSevak</div>
+          <div class="project-desc">A mobile app built for Smart India Hackathon that simplifies access to India's
+            groundwater data through interactive dashboards — featuring analytics, color-coded stress maps across states
+            and districts, and telemetry station exploration.</div>
+          <div class="project-tags">
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">PostGIS</span>
+            <span class="project-tag">GeoJSON</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/jalsevak" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/posts/sidharthvijayan06_firstapp-appdevelopment-learningbydoing-activity-7372695079645474816-2-i7"
+              class="project-link" target="_blank"><i class="fas fa-play-circle"></i> Video Demo</a>
+          </div>
+        </div>
+
+        <!-- AI Resume Analyzer -->
+        <div class="project-card reveal">
+          <div class="project-type">AI / NLP Tool</div>
+          <div class="project-name">AI Resume Analyzer</div>
+          <div class="project-desc">An intelligent resume screening app that parses multiple PDF resumes, scores and
+            ranks candidates against a custom job description using TF-IDF cosine similarity, weighted skill matching,
+            and experience analysis.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">spaCy</span>
+            <span class="project-tag">scikit-learn</span>
+            <span class="project-tag">Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/ai-resume-analyzer" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://sid-ai-resume-analyzer.streamlit.app/" class="project-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Contextly -->
+        <div class="project-card reveal">
+          <div class="project-type">AI / RAG Chatbot</div>
+          <div class="project-name">Contextly</div>
+          <div class="project-desc">A RAG-based customer support chatbot built for a hackathon, featuring a
+            WhatsApp-style UI. Ingests PDF/TXT documents, answers queries using TF-IDF retrieval and a Groq LLM, and
+            auto-escalates low-confidence queries to human agents via a live ticket dashboard.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">LangChain</span>
+            <span class="project-tag">Groq</span>
+            <span class="project-tag">TF-IDF</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/contextly" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- CV Fruit Ninja -->
+        <div class="project-card reveal">
+          <div class="project-type">Computer Vision / Game</div>
+          <div class="project-name">CV Fruit Ninja</div>
+          <div class="project-desc">A real-time webcam-based Fruit Ninja clone where hand gestures — tracked via
+            MediaPipe — slice falling fruits and trigger physics, combos, and particle effects. Features swipe
+            detection, stereo-panned audio, and smooth 30–60 FPS performance on CPU.</div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">MediaPipe</span>
+            <span class="project-tag">Pygame</span>
+            <span class="project-tag">OpenCV</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sidharth-vijayan/cv-fruit-ninja" class="project-link" target="_blank"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/posts/sidharthvijayan06_real-time-hand-tracked-fruit-ninja-built-activity-7397753557153701888-AYyp"
+              class="project-link" target="_blank"><i class="fas fa-play-circle"></i> Video Demo</a>
           </div>
         </div>
 
@@ -1505,62 +1664,101 @@
       <div class="certs-grid">
 
         <div class="cert-card reveal">
+          <div class="cert-icon"
+            style="font-weight:800;font-size:.7rem;letter-spacing:.05em;font-family:'Space Mono',monospace">IBM</div>
+          <div>
+            <div class="cert-name">IBM Machine Learning Specialization</div>
+            <div class="cert-issuer">IBM / Coursera</div>
+            <div class="cert-date">Jan 2026</div>
+            <a href="https://coursera.org/verify/professional-cert/L6LCVQRVWIIZ" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
           <div class="cert-icon"><i class="fab fa-google"></i></div>
           <div>
-            <div class="cert-name">Google Data Analytics</div>
+            <div class="cert-name">Google Prompting Essentials</div>
             <div class="cert-issuer">Google / Coursera</div>
-            <div class="cert-date">Jan 2024</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-aws"></i></div>
-          <div>
-            <div class="cert-name">AWS Certified Machine Learning</div>
-            <div class="cert-issuer">Amazon Web Services</div>
-            <div class="cert-date">March 2024</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
-          </div>
-        </div>
-
-        <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-brain"></i></div>
-          <div>
-            <div class="cert-name">Deep Learning Specialization</div>
-            <div class="cert-issuer">DeepLearning.AI / Coursera</div>
-            <div class="cert-date">Dec 2023</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <div class="cert-date">Jun 2025</div>
+            <a href="https://coursera.org/share/41a4696a7989c5a53846b12cc0aadcab" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
           </div>
         </div>
 
         <div class="cert-card reveal">
           <div class="cert-icon"><i class="fab fa-python"></i></div>
           <div>
-            <div class="cert-name">Python for Data Science</div>
-            <div class="cert-issuer">NPTEL / IIT</div>
-            <div class="cert-date">Oct 2023</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <div class="cert-name">Programming for Everybody (Getting Started with Python)</div>
+            <div class="cert-issuer">University of Michigan / Coursera</div>
+            <div class="cert-date">Jun 2025</div>
+            <a href="https://coursera.org/share/e01a37927be417ba75faebaf5ac78d44" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
           </div>
         </div>
 
         <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
           <div>
-            <div class="cert-name">Azure AI Engineer Associate</div>
-            <div class="cert-issuer">Microsoft</div>
-            <div class="cert-date">Nov 2023</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <div class="cert-name">Python Data Structures</div>
+            <div class="cert-issuer">University of Michigan / Coursera</div>
+            <div class="cert-date">Jun 2025</div>
+            <a href="https://coursera.org/share/a9089e4eee1f38ab93e0a10a11a192b1" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
           </div>
         </div>
 
         <div class="cert-card reveal">
-          <div class="cert-icon"><i class="fas fa-video"></i></div>
+          <div class="cert-icon"><i class="fas fa-industry"></i></div>
           <div>
-            <div class="cert-name">Fundamentals of Deep Learning</div>
-            <div class="cert-issuer">NVIDIA DLI</div>
-            <div class="cert-date">Aug 2023</div>
-            <a href="#" class="cert-link" target="_blank"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <div class="cert-name">Industrial Training Completion</div>
+            <div class="cert-issuer">BharatSkillz</div>
+            <div class="cert-date">Sep 2025</div>
+            <span class="cert-link"><i class="fas fa-id-badge"></i> ID: 2025:BS:248</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <div class="cert-name">Software Engineering</div>
+            <div class="cert-issuer">Infosys / Springboard</div>
+            <div class="cert-date">Apr 2026</div>
+            <a href="https://verify.onwingspan.com" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
+          <div>
+            <div class="cert-name">Software Design & Development: Modeling with UML</div>
+            <div class="cert-issuer">Infosys / Springboard</div>
+            <div class="cert-date">Apr 2026</div>
+            <a href="https://verify.onwingspan.com" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-tasks"></i></div>
+          <div>
+            <div class="cert-name">Software Product Management: Process Model Options</div>
+            <div class="cert-issuer">Infosys / Springboard</div>
+            <div class="cert-date">Apr 2026</div>
+            <a href="https://verify.onwingspan.com" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-clipboard-list"></i></div>
+          <div>
+            <div class="cert-name">Getting Started with Jira</div>
+            <div class="cert-issuer">Infosys / Springboard</div>
+            <div class="cert-date">Apr 2026</div>
+            <a href="https://verify.onwingspan.com" class="cert-link" target="_blank"><i
+                class="fas fa-external-link-alt"></i> Verify</a>
           </div>
         </div>
 
